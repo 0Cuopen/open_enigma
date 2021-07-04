@@ -23,6 +23,7 @@ Or install it yourself as:
 ## Usage
 
 ```irb
+> require 'open_enigma'
 > OpenEnigma::Enigma.new(plain_text, random_number, plug_board_hash).run
 ```
 
