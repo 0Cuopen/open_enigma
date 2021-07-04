@@ -22,7 +22,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```irb
+> OpenEnigma::Enigma.new(plain_text, random_number, plug_board_hash).run
+```
+
+### example
+
+```irb
+> OpenEnigma::Enigma.new('helloworld', 123, {'a'=>'b', 'd'=>'c'}).run
+```
+
+```irb
+=> "mshnhgzxdb"
+```
+
+```irb
+> OpenEnigma::Enigma.new('mshnhgzxdb', 123, {'a'=>'b', 'd'=>'c'}).run
+```
+
+```irb
+=> "helloworld"
+```
 
 ## Development
 
