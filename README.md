@@ -24,25 +24,25 @@ Or install it yourself as:
 
 ```irb
 > require 'open_enigma'
-> OpenEnigma::Enigma.new(plain_text, random_number, plug_board_hash).run
+> OpenEnigma.run(plain_text, random_number, plug_board_hash)
 ```
 
 ### example
 
 ```irb
-> OpenEnigma::Enigma.new('helloworld', 123, {'a'=>'b', 'd'=>'c'}).run
+> OpenEnigma.run('hello', 3, {'h'=>'w'})
 ```
 
 ```irb
-=> "mshnhgzxdb"
+=> "jnvyi"
 ```
 
 ```irb
-> OpenEnigma::Enigma.new('mshnhgzxdb', 123, {'a'=>'b', 'd'=>'c'}).run
+> OpenEnigma.run('jnvyi', 3, {'h'=>'w'})
 ```
 
 ```irb
-=> "helloworld"
+=> "hello"
 ```
 
 ## Development
