@@ -3,6 +3,11 @@ require "open_enigma/version"
 module OpenEnigma
   class Error < StandardError; end
   # Your code goes here...
+
+  def self.run(plain_text, rand_num, plug_hash)
+    Enigma.new(plain_text, rand_num, plug_hash).run
+  end
+
   class Enigma
     def initialize(plain_text, rand_num, plug_hash)
       @plain_text = plain_text
