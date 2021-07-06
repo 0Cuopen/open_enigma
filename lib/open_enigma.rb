@@ -67,13 +67,19 @@ module OpenEnigma
     private
   
     def plug_board(char, hash)
-      hash.keys.each do |key|
-        result = hash[key] if char == key
+      result = ''
+      hash.each do |key, value|
+        if char == key
+          result = value
+          break
+        elsif char == value
+          result = key
+          break
+        else
+          result = char
+        end
       end
-      hash.values.each do |value|
-        result = hash.invert[value] if char == value
-      end
-      result = char
+      result
     end
   
     def scrambler(scrambler_hash, char)
